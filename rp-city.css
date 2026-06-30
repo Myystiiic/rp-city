@@ -22,10 +22,7 @@
 .rp-time span{flex:1;padding:8px 10px;border:1px solid var(--bordure);border-radius:999px;color:var(--doux);text-align:center;font: 12px var(--fonttitle);}
 .rp-time .active{border-color:var(--accentcity);background:var(--accentcity);color:#fff}
 .rp-body{padding:clamp(18px,4vw,30px);background:var(--carte);border:1px solid var(--bordure);border-radius:8px}
-.rp-body p{margin:0 0 18px;text-align:justify;font: 14px 'Arial';letter-spacing: 1px;}
-.rp-body>p::first-letter{float:left;margin:9px 9px 0 0;color:var(--accentcity);font:48px var(--fonttitle);font-weight:700;line-height:.78;text-transform:uppercase}
-.rp-dialogue{margin:22px 0;padding:14px 16px;border-left:3px solid var(--accentcity);background:color-mix(in srgb,var(--accentcity) 10%,transparent);color:var(--texte);font-style:italic}
-.rp-dialogue p{margin:0;text-align:left}
+.rp-dialogue{padding:14px 16px;border-left:3px solid var(--accentcity);background:color-mix(in srgb,var(--accentcity) 10%,transparent);color:var(--texte);font-style:italic}
 .rp-music{display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center;margin-top:22px;padding:10px;border:1px solid var(--bordure);border-radius:8px;background:var(--fond);font-family:Arial,sans-serif}
 .rp-cover{width:44px;height:44px;border-radius:6px;background-image:var(--music-img);background-size:cover;background-position:center}
 .rp-song{min-width:0}
