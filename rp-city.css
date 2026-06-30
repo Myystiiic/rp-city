@@ -2,7 +2,7 @@
 --fiche-largeur: 760px;
 --texte-taille: 15px;
 --titre-taille: clamp(34px, 7vw, 60px);
---fonttitle: "Orbitron";
+--fonttitle: "Orbitron", sans-serif;
 }
 .rp-city,.rp-city *{box-sizing:border-box}
 .rp-city{--fond:var(--clair-fond);--carte:var(--clair-carte);--texte:var(--clair-texte);--doux:var(--clair-doux);--bordure:var(--clair-bordure);width:min(100%,var(--fiche-largeur));margin:30px auto;padding:clamp(18px,4vw,34px);background:var(--fond);color:var(--texte);border:1px solid var(--bordure);border-radius:8px;font-family:Georgia,"Times New Roman",serif;font-size:var(--texte-taille);line-height:1.8;transition:background .25s ease,color .25s ease,border-color .25s ease}
