@@ -8,28 +8,56 @@
 .rp-city{--fond:var(--clair-fond);--carte:var(--clair-carte);--texte:var(--clair-texte);--doux:var(--clair-doux);--bordure:var(--clair-bordure);width:100%;margin:30px auto;padding:clamp(18px,4vw,34px);background:var(--fond);color:var(--texte);border:1px solid var(--bordure);border-radius:8px;font-family:Georgia,"Times New Roman",serif;font-size:var(--texte-taille);line-height:1.8;transition:background .25s ease,color .25s ease,border-color .25s ease}
 .rp-switch-wrap{
 position:relative;
+display:block;
 width:min(100%,var(--fiche-largeur));
 margin:30px auto;
 }
 
-.rp-theme-check{
+.rp-city{
+--fond:var(--clair-fond);
+--carte:var(--clair-carte);
+--texte:var(--clair-texte);
+--doux:var(--clair-doux);
+--bordure:var(--clair-bordure);
+width:100%;
+margin:0;
+}
+
+.rp-switch-wrap[open] .rp-city{
+--fond:var(--sombre-fond);
+--carte:var(--sombre-carte);
+--texte:var(--sombre-texte);
+--doux:var(--sombre-doux);
+--bordure:var(--sombre-bordure);
+--accentcity:#e9654f;
+--accentcity3:#1f7478;
+}
+
+.rp-theme-button{
 position:absolute;
 top:clamp(18px,4vw,34px);
 right:clamp(18px,4vw,34px);
 z-index:5;
-appearance:none;
--webkit-appearance:none;
+display:block;
 width:48px;
 height:24px;
 padding:3px;
-border:1px solid var(--clair-bordure);
+border:1px solid var(--bordure);
 border-radius:999px;
-background:var(--clair-carte);
+background:var(--carte);
 cursor:pointer;
+list-style:none;
 }
 
-.rp-theme-check::before{
+.rp-theme-button::-webkit-details-marker{
+display:none;
+}
+
+.rp-theme-button::marker{
 content:"";
+}
+
+.rp-theme-button span{
 display:block;
 width:16px;
 height:16px;
@@ -38,24 +66,9 @@ background:var(--accentcity);
 transition:transform .25s ease,background .25s ease;
 }
 
-.rp-theme-check:checked{
-border-color:var(--sombre-bordure);
-background:var(--sombre-carte);
-}
-
-.rp-theme-check:checked::before{
+.rp-switch-wrap[open] .rp-theme-button span{
 transform:translateX(22px);
-background:#e9654f;
-}
-
-.rp-theme-check:checked ~ .rp-city{
---fond:var(--sombre-fond);
---carte:var(--sombre-carte);
---texte:var(--sombre-texte);
---doux:var(--sombre-doux);
---bordure:var(--sombre-bordure);
---accentcity:#e9654f;
---accentcity3:#1f7478;
+background:var(--accentcity);
 }
 .rp-topbar{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:18px;font-family:Arial,sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--doux)}
 .rp-theme-button{width:48px;height:24px;padding:3px;border:1px solid var(--bordure);border-radius:999px;background:var(--carte);cursor:pointer}
